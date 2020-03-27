@@ -5,6 +5,11 @@ import App from './App'
 import router from './router'
 // import './rem'
 import 'lib-flexible/flexible'
+import axios from 'axios'
+Vue.filter('setWH',(url,arg)=>{
+return url.replace(/w\.h/,arg);
+})
+Vue.prototype.$axios=axios
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

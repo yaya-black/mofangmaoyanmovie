@@ -1,32 +1,30 @@
 <template>
   <div id="yingcheng">
-    <ul>
-      <li class="name">万达影城</li>
-      <li class="number">24</li>
-    </ul>
-    <ul>
-      <li class="name">保利万和影城</li>
-      <li class="number">24</li>
-    </ul>
-    <ul>
-      <li class="name">大地影院</li>
-      <li class="number">16</li>
-    </ul>
-    <ul>
-      <li class="name">UME国际影城</li>
-      <li class="number">16</li>
-    </ul>
-    <ul>
-      <li class="name">金逸影城</li>
-      <li class="number">9</li>
+    <ul v-for="item in cinemas" :key="item.id">
+      <li class="name">{{item.nm}}</li>
+      <li class="number">{{item.distance}}</li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Brand"
+  name: "Brand",
+  data() {
+    return{
+      cinemas:[]
+    }
+  },
+  mounted() {
+  this.$axios.get("/api/cinemaList?cityId=10").then(res => {
+      var msg = res.data.msg;
+      if (msg == "ok") {
+        this.cinemas = res.data.data.cinemas;
+      }
+    });
+}
 };
+
 </script>
 
 <style scoped>

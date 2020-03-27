@@ -8,7 +8,7 @@
           <i class="iconfont icon-lower-triangle"></i>
         </router-link>
         <router-link tag="div" to="/Cinema/Brand" class="brand_swtich">
-          品牌
+          电影院
           <i class="iconfont icon-lower-triangle"></i>
         </router-link>
         <!-- <div class="feature_switch">
