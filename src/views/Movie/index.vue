@@ -4,7 +4,7 @@
     <div id="content">
       <div class="movie_menu">
         <router-link tag="div" to="/Movie/City" class="city_name">
-          <span>大连</span>
+          <span>{{$store.state.city.nm}}</span>
           <i class="iconfont icon-lower-triangle"></i>
         </router-link>
         <div class="hot_swtich">
@@ -19,6 +19,7 @@
           <router-view/>
         </keep-alive>
       <TabBar />
+      <MessageBox/>
     </div>
   </div>
 </template>
@@ -26,18 +27,22 @@
 <script>
 import Header from "@/components/Header";
 import TabBar from "@/components/TabBar";
+import MessageBox from '@/components/MessageBox';
 export default {
   name: "Movie",
   components: {
     Header,
-    TabBar
+    TabBar,
+    MessageBox
   },
   data() {
     return {
       msg: ""
     };
   },
-  methods: {}
+  mounted(){
+    
+  },
 };
 </script>
 

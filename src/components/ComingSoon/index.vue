@@ -1,5 +1,7 @@
 <template>
-  <div class="movie_body">
+  <div class="movie_body" ref="movie_body">
+    <Loading v-if="isLoading" />
+    <Scroller v-else>
     <ul>
       <!-- <li>
         <div class="pic_show">
@@ -15,9 +17,10 @@
         </div>
         <div class="btn_pre">预售</div>
       </li> -->
+      <!-- <li>{{pulldownMsg}}</li> -->
       <li v-for="item in comingList" :key="item.id">
-        <div class="pic_show">
-          <img :src="item.img|setWH('128.180')" />
+        <div class="pic_show" >
+          <img :src="item.img|setWH('128.180')"  />
         </div>
         <div class="info_list">
           <h2>{{item.nm}}<img v-if="item.version" src="@/assets/maxs.png"></h2>
@@ -30,26 +33,39 @@
         <div class="btn_pre">预售</div>
       </li>  
     </ul>
+    </Scroller>
   </div>
 </template>
 
 <script>
+import BScroll from 'better-scroll'
 export default {
   name: "ComingSoon",
   data() {
     return {
-      comingList:[]
+      comingList:[],
+      pulldownMsg:'',
+      isLoading:true,
+      prevCity:-1
     };
   },
-  mounted(){
-   this.$axios.get("/api/movieComingList?cityId=10").then(res=>{
+  activated(){
+    var cityId=this.$store.state.city.id;
+    if(this.prevCity==cityId){return;}
+    this.isLoading=true;
+   this.$axios.get("/api/movieComingList="+cityId).then(res=>{
      var msg=res.data.msg;
      if(msg=='ok'){
        this.comingList=res.data.data.comingList;
-     }
-   })
-  },
-  methods: {}
+       //console.log(this.comingList);
+       this.isLoading=false;
+       this.prevCity=cityId;
+       
+       };
+     })
+   },
+  methods: {
+  }
 };
 </script>
 
