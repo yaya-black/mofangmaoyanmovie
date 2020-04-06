@@ -36,10 +36,13 @@
         </ul>
     </div>-->
     <div class="city_list">
-      <div class="city_hot">
+      <Loading v-if="isLoading"/>
+      <Scroller ref="city_list" v-else>
+        <div>
+      <div class="city_hot" ref="city_hot">
         <h2>热门城市</h2>
         <ul class="clearfix">
-          <li v-for="item in HotList" :key="item.id">{{item.nm}}</li>
+          <li v-for="item in HotList" :key="item.id" @tap="handleToCity(item.nm,item.id)">{{item.nm}}</li>
         </ul>
       </div>
 
@@ -47,10 +50,12 @@
         <div v-for="item in cityList" :key="item.index">
           <h2>{{item.index}}</h2>
           <ul>
-            <li v-for="itemList in item.list" :key="itemList.id">{{itemList.nm}}</li>
+            <li v-for="itemList in item.list" :key="itemList.id" @tap='handleToCity(itemList.nm,itemList.id)'>{{itemList.nm}}</li>
           </ul>
         </div>
       </div>
+        </div>
+      </Scroller>
     </div>
     <div class="city_index">
         <ul>
@@ -67,23 +72,38 @@ export default {
   data() {
     return {
       cityList: [],
-      HotList: []
+      HotList: [],
+      isLoading:true
     };
   },
   mounted() {
+    
+    var cityList=window.localStorage.getItem('cityList');
+    var HotList=window.localStorage.getItem('HotList');
+    if(cityList&&HotList){
+     this.cityList=JSON.parse(cityList);
+     this.HotList=JSON.parse(HotList);
+     this.isLoading=false;
+    }
     //在mounted（）中获取数据
+    else{
     this.$axios.get("/api/cityList").then(res => {
       var msg = res.data.msg;
       if (msg == "ok") {
         var cities = res.data.data.cities;
         var { cityList, HotList } = this.formatCityList(cities);
-        //console.log(this.$refs.city_sort.getElementsByTagName("h2"));
+       // console.log(this.$refs.city_sort.getElementsByTagName("h2"));
         this.cityList = cityList;
         // for(var i=0;i<cityList.length;i++){
         // console.log(item);}
         this.HotList = HotList;
+        window.localStorage.setItem('cityList',JSON.stringify(cityList));
+        window.localStorage.setItem('HotList',JSON.stringify(HotList));
+        this.isLoading=false;
       }
     });
+  }
+    
   },
   //数据的处理
   methods: {
@@ -91,6 +111,7 @@ export default {
       var cityList = [];
       var HotList = [];
       for (var i = 0; i < cities.length; i++) {
+        // console.log(cities[i].isHot);
         if (cities[i].isHot === 1) {
           HotList.push(cities[i]);
         }
@@ -140,7 +161,16 @@ export default {
     },
     handleToIndex(index){
     var h2=this.$refs.city_sort.getElementsByTagName("h2");
-    this.$refs.city_sort.parentNode.scrollTop=h2[index].offsetTop;
+    // var city_hot=this.$refs.city_hot.getElementsByClassName("city_hot");
+    // this.$refs.city_sort.parentNode.scrollTop=h2[index].offsetTop;
+    this.$refs.city_list.ToScrollTop(-h2[index].offsetTop);
+    },
+    handleToCity(nm,id){
+      this.$store.commit('city/CITY_INFO',{nm,id});//修改状态管理的值
+       console.log(id);
+      window.localStorage.setItem('nowNm',nm);
+      window.localStorage.setItem('nowId',id);  //保证刷新后城市是点击的城市
+      this.$router.push('/Movie/NowPlaying');  //编程式路由，点击城市后跳转到NowPlaying页面
     }
     
   }

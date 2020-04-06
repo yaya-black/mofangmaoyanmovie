@@ -23,6 +23,9 @@
           </div>
         </li>
       </ul>-->
+      <Loading v-if="isLoading"/>
+      <Scroller v-else>
+      <div>
       <ul v-for="item in cinemas" :key="item.id">
         <li>
           <div>
@@ -46,6 +49,8 @@
           </div>
         </li>
       </ul>
+      </div>
+      </Scroller>
     </div>
   </div>
 </template>
@@ -55,7 +60,9 @@ export default {
   name: "AllCity",
   data() {
     return {
-      cinemas: []
+      cinemas: [],
+      isLoading:true,
+      prevCity:-1
     };
   },
 //   computed: {
@@ -65,11 +72,17 @@ export default {
 // })
 // }
 // },
-  mounted() {
-    this.$axios.get("/api/cinemaList?cityId=10").then(res => {
+  activated() {
+    var cityId=this.$store.state.city.id;
+    if(this.prevCity==cityId) {return;}
+    this.isLoading=true;
+    // console.log(890);
+    this.$axios.get("/api/allCityList="+cityId).then(res => {
       var msg = res.data.msg;
       if (msg == "ok") {
         this.cinemas = res.data.data.cinemas;
+        this.prevCity=cityId;
+        this.isLoading=false;
       }
     });
   },
