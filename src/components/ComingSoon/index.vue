@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="movie_body" ref="movie_body">
     <Loading v-if="isLoading" />
     <Scroller v-else>
@@ -19,11 +20,11 @@
       </li> -->
       <!-- <li>{{pulldownMsg}}</li> -->
       <li v-for="item in comingList" :key="item.id">
-        <div class="pic_show" >
+        <div class="pic_show" @tap="handleToDetail(item.id)">
           <img :src="item.img|setWH('128.180')"  />
         </div>
         <div class="info_list">
-          <h2>{{item.nm}}<img v-if="item.version" src="@/assets/maxs.png"></h2>
+          <h2 @tap="handleToDetail(item.id)">{{item.nm}}<img v-if="item.version" src="@/assets/maxs.png"></h2>
           <p>
             <span class="person">{{item.wish}}</span> 人想看
           </p>
@@ -35,6 +36,7 @@
     </ul>
     </Scroller>
   </div>
+</div>
 </template>
 
 <script>
@@ -65,14 +67,19 @@ export default {
      })
    },
   methods: {
+    handleToDetail(movieId){
+      this.$router.push('/Movie/detail/2/'+movieId);
+    }
   }
 };
 </script>
 
 <style scoped>
-#content .movie_body {
+ .movie_body {
   flex: 1;
   overflow: auto;
+  height: 460px;
+  
 }
 .movie_body ul {
   margin: 0 12px;

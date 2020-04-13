@@ -22,3 +22,17 @@ Mock.mock('/api/allCityList=1','get',require('./json/allCityList=1'));
 Mock.mock('/api/allCityList=20','get',require('./json/allCityList=20'));
 Mock.mock('/api/allCityList=40','get',require('./json/allCityList=40'));
 Mock.mock('/api/allCityList=45','get',require('./json/allCityList=45'));
+Mock.mock('/api/detailmovie=12182317','get',require('./json/detail= 12182317'));
+Mock.mock('/api/detailmovie=1238783','get',require('./json/detail=1238783'));
+Mock.mock('/api/detailmovie=338747','get',require('./json/detail=338747'));
+Mock.mock('/api/detailmovie=1218273','get',require('./json/detail=1218273'));
+Mock.mock('/api/detailmovie=41747','get',require('./json/detail=41747'));
+Mock.mock('/api/detailmovie=12182315','get',require('./json/detail=12182315'));
+Mock.mock('/api/detailmovie=12182316','get',require('./json/detail=12182316'));
+Mock.mock('/api/detailmovie=12182312','get',require('./json/detail=12182312'));
+Mock.mock('/api/detailmovie=338744','get',require('./json/detail= 338744'));
+
+
+
+
+

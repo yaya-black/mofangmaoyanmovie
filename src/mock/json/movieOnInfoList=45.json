@@ -39,17 +39,17 @@
                 "wishst": 0
             },
             {
-                "id": 1301612,
+                "id": 338747,
                 "haspromotionTag": false,
-                "img": "https://p0.meituan.net/movie/2d4835513a81f6121189e1c3800eb1a3647939.jpg@464w_644h_1e_1c",
+                "img": "https://p0.meituan.net/movie/077f41ce44d059a01288e0d7bf704f9f1642095.jpg@464w_644h_1e_1c",
                 "version": "",
-                "nm": "急先锋",
+                "nm": "玩命三日",
                 "proShow": false,
                 "sc": 9.5,
                 "globalReleased": true,
-                "wish": 39567,
-                "star": "成龙，杨洋，艾伦，徐若晗，母其弥雅，朱正廷",
-                "rt": "2020-01-15",
+                "wish": 29751,
+                "star": "张嘉译，闫妮，姜妍，姬他",
+                "rt": "2020-02-14",
                 "showInfo": "今天暂无场次",
                 "showst": 0,
                 "wishst": 0
@@ -70,22 +70,7 @@
                 "showst": 0,
                 "wishst": 0
             },  
-            {
-                "id": 338747,
-                "haspromotionTag": false,
-                "img": "https://p0.meituan.net/movie/077f41ce44d059a01288e0d7bf704f9f1642095.jpg@464w_644h_1e_1c",
-                "version": "",
-                "nm": "玩命三日",
-                "proShow": false,
-                "sc": 9.5,
-                "globalReleased": true,
-                "wish": 29751,
-                "star": "张嘉译，闫妮，姜妍，姬他",
-                "rt": "2020-02-14",
-                "showInfo": "今天暂无场次",
-                "showst": 0,
-                "wishst": 0
-            },
+           
             {
                 "id": 338744,
                 "haspromotionTag": false,
@@ -118,22 +103,6 @@
                 "showst": 0,
                 "wishst": 0
             },
-            {   
-                "id":367835,
-                "haspromotionTag":false,
-                "img":"http://p1.meituan.net/w.h/movie/d3f2c33b95e10f54dc402de27bb4bdc11292214.jpg",
-                "version":"",
-                "nm":"麦兜·饭宝奇兵",
-                "preShow":false,
-                "sc":0,
-                "globalReleased":false,
-                "wish":25201,
-                "star":"大汪,孙小妞,张正中",
-                "rt":"2020-04-25",
-                "showst":1,
-                "wishst":0,
-                "comingTitle":"4月25日 周六"
-            },
             {
                 "id":1298030,
                 "haspromotionTag":false,
@@ -161,21 +130,6 @@
                 "globalReleased":false,
                 "wish":5651,
                 "star":"詹姆斯·卡梅隆,施万克,方国民",
-                "rt":"2020-04-04",
-                "showst":1,
-                "wishst":0,
-                "comingTitle":"4月4日 周六"
-            },
-            {
-                "id":1302405,
-                "haspromotionTag":false,
-                "img":"http://p1.meituan.net/w.h/movie/81fe2197ef930c79624a28cc76c423835264620.png",
-                "version":"",
-                "nm":"小公主艾薇拉与神秘王国2",
-                "preShow":false,
-                "sc":0,
-                "globalReleased":false,
-                "wish":4153,
                 "rt":"2020-04-04",
                 "showst":1,
                 "wishst":0,
@@ -260,24 +214,8 @@
                 "showst":1,
                 "wishst":0,
                 "comingTitle":"4月3日 周五"
-            },
-            {
-                "id":1301478,
-                "haspromotionTag":false,
-                "img":"http://p0.meituan.net/w.h/movie/4e0d0e826fded46ec79e1e335b2482be52178.jpg",
-                "version":"",
-                "nm":"北平会馆",
-                "preShow":false,
-                "sc":0,
-                "globalReleased":false,
-                "wish":13464,
-                "star":"吴大可,朱梓瑜,刘亦彤",
-                "rt":"2020-04-04",
-                "showst":1,
-                "wishst":0,
-                "comingTitle":"4月4日 周六"
             }
-
+           
         ]
     }
 }

@@ -4,10 +4,26 @@
     "status": 0,
     "data": {
         "movieList": [
+            {
+                "id": 338747,
+                "haspromotionTag": false,
+                "img": "https://p0.meituan.net/movie/077f41ce44d059a01288e0d7bf704f9f1642095.jpg@464w_644h_1e_1c",
+                "version": "",
+                "nm": "玩命三日",
+                "proShow": false,
+                "sc": 9.5,
+                "globalReleased": true,
+                "wish": 29751,
+                "star": "张嘉译，闫妮，姜妍，姬他",
+                "rt": "2020-02-14",
+                "showInfo": "今天暂无场次",
+                "showst": 0,
+                "wishst": 0
+            },
             
             {
                 
-                "id": 12182317,
+                "id": 12182312,
                 "haspromotionTag": false,
                 "img": "https://p0.meituan.net/w.h/movie/6f1881b0a1a3f2dd0478f2a68edec8d2966760.jpg",
                 "version": "v2dimax",
@@ -22,34 +38,51 @@
                 "showst": 3,
                 "wishst": 0
             },
-            {
-                "id": 1212608,
-                "haspromotionTag": false,
-                "img": "https://p0.meituan.net/movie/b0e0d6ce9914f37e7f9f6ade13e096342721150.jpg@464w_644h_1e_1c" ,
-                "version": "",
-                "nm": "唐人街探案3",
-                "proShow": false,
-                "sc": 8.0,
-                "globalReleased": true,
-                "wish": 35241,
-                "star": "王宝强，刘昊然，期夫木聪",
-                "rt": "2020-01-15",
-                "showInfo": "今天暂无场次",
-                "showst": 0,
-                "wishst": 0
+            {   
+                "id":12182316,
+                "haspromotionTag":false,
+                "img":"https:/p1.meituan.net/w.h/moviemachine/979531e95cace9abb4c6b74c6a0fdd486176654.jpg@464w_644h_1e_1c",
+                "version":"",
+                "nm":"变身特工",
+                "preShow":false,
+                "sc":0,
+                "globalReleased":false,
+                "wish":25201,
+                "star":"大汪,孙小妞,张正中",
+                "rt":"2020-04-25",
+                "showst":1,
+                "wishst":0,
+                "comingTitle":"4月25日 周六"
             },
             {
-                "id": 1301612,
+                
+                "id":41747,
+                "haspromotionTag":false,
+                "img":"http://p0.meituan.net/w.h/movie/c858e9aed9c0ce075f5918138586e74d179389.jpg",
+                "version":"",
+                "nm":"狂欢之夜",
+                "preShow":false,
+                "sc":7.1,
+                "globalReleased":true,
+                "wish":10,
+                "star":"尤里·别洛夫,Georgi Kulikov,瓦连京·布雷列耶夫",
+                "rt":"1956-12-29",
+                "showInfo":"今天暂无场次",
+                "showst":3,
+                "wishst":0
+            },
+            {
+                "id": 1238783,
                 "haspromotionTag": false,
-                "img": "https://p0.meituan.net/movie/2d4835513a81f6121189e1c3800eb1a3647939.jpg@464w_644h_1e_1c",
-                "version": "",
-                "nm": "急先锋",
+                "img": "https://p0.meituan.net/movie/3dc44919f0917b5823c867813f29fba42625689.jpg",
+                "version": "v2dimax",
+                "nm": "姜子牙",
                 "proShow": false,
-                "sc": 9.5,
+                "sc": 8.5,
                 "globalReleased": true,
-                "wish": 39567,
-                "star": "成龙，杨洋，艾伦，徐若晗，母其弥雅，朱正廷",
-                "rt": "2020-01-15",
+                "wish": 39241,
+                "star": "程腾 李炜",
+                "rt": "2020-01-13",
                 "showInfo": "今天暂无场次",
                 "showst": 0,
                 "wishst": 0
@@ -86,22 +119,7 @@
                 "showst": 0,
                 "wishst": 0
             },
-            {
-                "id": 338747,
-                "haspromotionTag": false,
-                "img": "https://p0.meituan.net/movie/077f41ce44d059a01288e0d7bf704f9f1642095.jpg@464w_644h_1e_1c",
-                "version": "",
-                "nm": "玩命三日",
-                "proShow": false,
-                "sc": 9.5,
-                "globalReleased": true,
-                "wish": 29751,
-                "star": "张嘉译，闫妮，姜妍，姬他",
-                "rt": "2020-02-14",
-                "showInfo": "今天暂无场次",
-                "showst": 0,
-                "wishst": 0
-            },
+           
             {
                 "id": 338744,
                 "haspromotionTag": false,
@@ -118,22 +136,7 @@
                 "showst": 0,
                 "wishst": 0
             },
-            {   
-                "id":367835,
-                "haspromotionTag":false,
-                "img":"http://p1.meituan.net/w.h/movie/d3f2c33b95e10f54dc402de27bb4bdc11292214.jpg",
-                "version":"",
-                "nm":"麦兜·饭宝奇兵",
-                "preShow":false,
-                "sc":0,
-                "globalReleased":false,
-                "wish":25201,
-                "star":"大汪,孙小妞,张正中",
-                "rt":"2020-04-25",
-                "showst":1,
-                "wishst":0,
-                "comingTitle":"4月25日 周六"
-            },
+            
             {
                 "id":1298030,
                 "haspromotionTag":false,
@@ -196,87 +199,8 @@
                 "showst":1,
                 "wishst":0,
                 "comingTitle":"4月11日 周六"
-            },
-            {
-                "id":1302494,
-                "haspromotionTag":false,
-                "img":"http://p1.meituan.net/w.h/moviemachine/6664cd8c31f1254bc52793a158dc53ff8811971.jpg",
-                "version":"",
-                "nm":"调酒师",
-                "preShow":false,
-                "sc":0,
-                "globalReleased":false,
-                "wish":819,
-                "star":"刘挺,陆莹,张如意",
-                "rt":"2020-03-13",
-                "showst":1,
-                "wishst":0,
-                "comingTitle":"3月13日 周五"
-            },
-            {
-                "id":1318812,
-                "haspromotionTag":false,
-                "img":"http://p0.meituan.net/w.h/movie/6adbe9c365a3aaadfb65910bc279bf6a3385927.jpg",
-                "version":"",
-                "nm":"沉香",
-                "preShow":false,
-                "sc":0,
-                "globalReleased":false,
-                "wish":206,
-                "star":"朱仲春,尹航,梁靖晨",
-                "rt":"2020-03-27",
-                "showst":1,
-                "wishst":0,
-                "comingTitle":"3月27日 周五"
-            },
-            {
-                "id":1212607,
-                "haspromotionTag":false,
-                "img":"http://p0.meituan.net/w.h/movie/115273d73084aa4e54c3401f7457e9fa1185899.jpg",
-                "version":"",
-                "nm":"站住！小偷",
-                "preShow":false,
-                "sc":0,
-                "globalReleased":false,
-                "wish":39774,
-                "star":"郑云,梁小龙,尤勇",
-                "rt":"2020-03",
-                "showst":1,
-                "wishst":0,
-                "comingTitle":"3月 待定"
-            },
-            {
-                "id":1301613,
-                "haspromotionTag":false,
-                "img":"http://p1.meituan.net/w.h/moviemachine/5abd9fa1ab51da3ff81f52c97e6f9f7076364.jpg",
-                "version":"",
-                "nm":"今生只为遇见你",
-                "preShow":false,
-                "sc":0,
-                "globalReleased":false,
-                "wish":3510,
-                "star":"田志斌,于苏桐,何海蓝",
-                "rt":"2020-04-03",
-                "showst":1,
-                "wishst":0,
-                "comingTitle":"4月3日 周五"
-            },
-            {
-                "id":1301478,
-                "haspromotionTag":false,
-                "img":"http://p0.meituan.net/w.h/movie/4e0d0e826fded46ec79e1e335b2482be52178.jpg",
-                "version":"",
-                "nm":"北平会馆",
-                "preShow":false,
-                "sc":0,
-                "globalReleased":false,
-                "wish":13464,
-                "star":"吴大可,朱梓瑜,刘亦彤",
-                "rt":"2020-04-04",
-                "showst":1,
-                "wishst":0,
-                "comingTitle":"4月4日 周六"
             }
+          
 
         ]
     }
