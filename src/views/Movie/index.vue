@@ -17,10 +17,11 @@
       </div>
        <keep-alive> 
           <router-view/>
-        </keep-alive>
-      <TabBar />
-      <MessageBox/>
+       </keep-alive>
+        <MessageBox/>
     </div>
+    <TabBar />
+    <router-view name="detail"/>  
   </div>
 </template>
 

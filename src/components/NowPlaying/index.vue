@@ -18,11 +18,11 @@
         </li>-->
         <li class="pullDown">{{pullDownMsg}}</li>
         <li v-for="item in movieList" :key="item.id">
-          <div class="pic_show" @tap="handleToDetail">
+          <div class="pic_show" @tap="handleToDetail(item.id)">
             <img :src="item.img | setWH('128.180')" />
           </div>
           <div class="info_list">
-            <h2>{{item.nm}}<img v-if="item.version" src="@/assets/maxs.png"></h2>
+            <h2  @tap="handleToDetail(item.id)">{{item.nm}}<img v-if="item.version" src="@/assets/maxs.png"></h2>
             <p>
               <span class="person">{{item.wish}}</span> 人想看
             </p>
@@ -54,7 +54,7 @@ export default {
     if(this.prevCity===cityId) {return;}  //没有切换城市
     this.isLoading=true;
     // console.log(this.prevCity,cityId);
-    console.log(123);
+    // console.log(123);
  
     this.$axios.get("/api/movieOnInfoList="+cityId).then(res => {
       var msg = res.data.msg;
@@ -97,8 +97,9 @@ export default {
   },
 
   methods: {
-    handleToDetail(){
-      console.log("detail")
+    handleToDetail(movieId){
+      // console.log(movieId);
+      this.$router.push('/Movie/detail/1/'+movieId);
     },
     handleToScroll(pos){
       if(pos.y>30){
